@@ -42,6 +42,8 @@ div.dropdown-extra {
   div.dropdown-extra div.dropdown-extra-content label {
     color: #333;
     font-weight: 900;
+    margin-left: 20px;
+    line-height: 15px;
   }
   
   div.dropdown-extra.active div.dropdown-extra-content {

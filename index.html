@@ -18,45 +18,50 @@
     <script type="text/javascript" src="bootstrap-dropdown-extrafields.js"></script>
 
     <script>
-        // example
-        var data =
-        {
-            text: 'Please select your desired option', options:
-                [
-                    {
-                        checkbox: { attributes: [{ key: 'value', value: '2' }, { key: 'style', value: 'color: red;' }, { key: 'checked', value: 'checked' },], label: 'My Option 1' },
-                        input: { attributes: [{ key: 'type', value: 'text' }, { key: 'value', value: 'This is a great plugin' }, { key: 'required', value: 'required' },] }
-                    },
-                    {
-                        checkbox: { attributes: [{ key: 'value', value: '2' }], label: 'My Option 2' },
-                        input: [
-                            { attributes: [{ key: 'type', value: 'text' }, { key: 'value', value: 'This is a text input' }, { key: 'required', value: 'required' },] },
-                            { attributes: [{ key: 'type', value: 'number' }, { key: 'value', value: 'this is a number input' }, { key: 'required', value: 'required' },] },
-                            { attributes: [{ key: 'type', value: 'email' }, { key: 'value', value: 'This is a email input' }, { key: 'required', value: 'required' },] }
-                        ]
-                    },
-                    {
-                        checkbox: {
-                            attributes: [
-                                { key: 'value', value: '3' },
-                                { key: 'checked', value: 'checked' },
-                            ],
-                            label: 'My Option 3'
+
+        $(document).ready(function () {
+
+            // example
+            var data =
+            {
+                text: 'Please select your desired option', options:
+                    [
+                        {
+                            checkbox: { attributes: [{ key: 'value', value: '2' }, { key: 'style', value: 'color: red;' }, { key: 'checked', value: 'checked' },], label: 'My Option 1' },
+                            input: { attributes: [{ key: 'type', value: 'text' }, { key: 'value', value: 'This is a great plugin' }, { key: 'required', value: 'required' },] }
                         },
-                        input: {
-                            attributes: [
-                                { key: 'type', value: 'text' },
-                                { key: 'value', value: 'Some text input' },
+                        {
+                            checkbox: { attributes: [{ key: 'value', value: '2' },{ key: 'checked', value: 'checked' }], label: 'My Option 2' },
+                            input: [
+                                { attributes: [{ key: 'type', value: 'text' }, { key: 'value', value: 'This is a text input' }, { key: 'required', value: 'required' },] },
+                                { attributes: [{ key: 'type', value: 'number' }, { key: 'value', value: '2019' }, { key: 'required', value: 'required' },] },
+                                { attributes: [{ key: 'type', value: 'email' }, { key: 'value', value: 'nuno-miranda@sapo.pt' }, { key: 'required', value: 'required' },] }
                             ]
+                        },
+                        {
+                            checkbox: {
+                                attributes: [
+                                    { key: 'value', value: '3' }
+                                    //,{ key: 'checked', value: 'checked' },
+                                ],
+                                label: 'My Option 3'
+                            },
+                            input: {
+                                attributes: [
+                                    { key: 'type', value: 'text' },
+                                    { key: 'value', value: 'Some disabled text input' },
+                                ]
+                            }
                         }
-                    }
-                ]
-        };
-        $("#my-extra-field").DropdownExtra(data).on("changed", function (e, isOpen) {
-            if (isOpen)
-                console.log("it's open!");
-            else
-                console.log("oh no..");
+                    ]
+            };
+
+            $("#my-extra-field").DropdownExtra(data).on("changed", function (e, isOpen) {
+                if (isOpen)
+                    console.log("it's open!");
+                else
+                    console.log("oh no..");
+            });
         });
     </script>
 
