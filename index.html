@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-dropdown-extrafields.css">
+
+</head>
+
+<body>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="bootstrap-dropdown-extrafields.js"></script>
+
+    <script>
+        // example
+        var data =
+        {
+            text: 'Please select your desired option', options:
+                [
+                    {
+                        checkbox: { attributes: [{ key: 'value', value: '2' }, { key: 'style', value: 'color: red;' }, { key: 'checked', value: 'checked' },], label: 'My Option 1' },
+                        input: { attributes: [{ key: 'type', value: 'text' }, { key: 'value', value: 'This is a great plugin' }, { key: 'required', value: 'required' },] }
+                    },
+                    {
+                        checkbox: { attributes: [{ key: 'value', value: '2' }], label: 'My Option 2' },
+                        input: [
+                            { attributes: [{ key: 'type', value: 'text' }, { key: 'value', value: 'This is a text input' }, { key: 'required', value: 'required' },] },
+                            { attributes: [{ key: 'type', value: 'number' }, { key: 'value', value: 'this is a number input' }, { key: 'required', value: 'required' },] },
+                            { attributes: [{ key: 'type', value: 'email' }, { key: 'value', value: 'This is a email input' }, { key: 'required', value: 'required' },] }
+                        ]
+                    },
+                    {
+                        checkbox: {
+                            attributes: [
+                                { key: 'value', value: '3' },
+                                { key: 'checked', value: 'checked' },
+                            ],
+                            label: 'My Option 3'
+                        },
+                        input: {
+                            attributes: [
+                                { key: 'type', value: 'text' },
+                                { key: 'value', value: 'Some text input' },
+                            ]
+                        }
+                    }
+                ]
+        };
+        $("#my-extra-field").DropdownExtra(data).on("changed", function (e, isOpen) {
+            if (isOpen)
+                console.log("it's open!");
+            else
+                console.log("oh no..");
+        });
+    </script>
+
+    <div id="my-extra-field">
+
+    </div>
+
+</body>
