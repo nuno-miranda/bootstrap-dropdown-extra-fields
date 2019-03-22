@@ -1,1 +1,51 @@
-.
+
+/* DROPDOWN EXTRA FIELDS */
+div.dropdown-extra {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    color: #212529;
+  }
+  div.dropdown-extra div.dropdown-extra-wrap {
+    border-bottom: 1px solid #ced4da;
+    padding: 10px;
+    background-color: #f8f9fa;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+  }
+  div.dropdown-extra div.dropdown-extra-wrap:hover {
+    background-color: #e2e6ea;
+  }
+  div.dropdown-extra div.dropdown-extra-wrap span {
+    color: #212529 !important;
+    text-transform: uppercase;
+  }
+  div.dropdown-extra div.dropdown-extra-wrap i.fas.fa-chevron-right {
+    float: right;
+    line-height: 25px;
+  }
+  div.dropdown-extra div.dropdown-extra-content {
+    display: none;
+    max-height: 200px;
+    overflow: auto;
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+  }
+  div.dropdown-extra div.dropdown-extra-content .input-group input:disabled {
+    background-color: #eee;
+    font-weight: 100 !important;
+    padding: 10px !important;
+    padding-left: 10px !important;
+  }
+  div.dropdown-extra div.dropdown-extra-content label {
+    color: #333;
+    font-weight: 900;
+  }
+  
+  div.dropdown-extra.active div.dropdown-extra-content {
+    display: block;
+    -webkit-transform: all 1s;
+            transform: all 1s;
+  }
