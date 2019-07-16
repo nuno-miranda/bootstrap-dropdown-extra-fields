@@ -5,4 +5,4 @@ NOTE: This plugin is still in development
 
 With this plugin you can create a customized dropdown with multiple checkboxes each one with also multiple customizable inputs.
 
-It's missing mobile responsivness
+It's missing mobile responsiveness
